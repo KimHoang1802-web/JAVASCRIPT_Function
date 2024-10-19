@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THUẾ THU NHẬP CÁ NHÂN</title>
+    <link rel="stylesheet" href="../src/css/output.css">
+    <link rel="icon" href="../src/img/kiwi.png" type="image/png">
+</head>
+<body>
+    <div class="container mt-8">
+        <h3 class="text-4xl text-center text-green-600 rounded-2xl border border-green-800 font-bold p-4">TÍNH THUẾ THU NHẬP CÁ NHÂN</h3>
+    </div>
+    <div class="container mt-8">
+        <p>Viết chương trình nhập vào thông tin của 1 cá nhân (Họ tên, tổng thu nhập năm, số người phụ thuộc).
+            <br>
+            Tính và xuất thuế thu nhập cá nhân phải trả theo quy định sau
+        </p>
+        <p class="font-bold text-green-800">Thu nhập chịu thuế = Tổng thu nhập năm - 4 triệu - số người phụ thuộc * 1,6 triệu</p>
+        <div class="mt-5">
+            <table border="4px" style="width: 50%; " align="center">
+                <tr class="border mb-2 text-center">
+                    <th class="border">Thu nhập chịu thuế (triệu)</th>
+                    <th>Thuế suất (%)</th>
+                </tr>
+                <tr class="border mb-2 text-center">
+                    <td class="border">Đến 60</td>
+                    <td>5</td>
+                </tr>
+                <tr class="border mb-2 text-center">
+                    <td class="border">Trên 60 đến 120 </td>
+                    <td>10</td>
+                </tr>
+                <tr class="border mb-2 text-center">
+                    <td class="border">Trên 120 đến 210</td>
+                    <td>15</td>
+                </tr>
+                <tr class="border mb-2 text-center">
+                    <td class="border">Trên 210 đến 384</td>
+                    <td>20</td>
+                </tr>
+                <tr class="border mb-2 text-center">
+                    <td class="border">Trên 384 đến 624</td>
+                    <td>25</td>
+                </tr>
+                <tr class="border mb-2 text-center">
+                    <td class="border">Trên 624 đến 960</td>
+                    <td>30</td>
+                </tr>
+                <tr class="border mb-2 text-center">
+                    <td class="border">Trên 960</td>
+                    <td>35</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container mt-8 rounded-2xl border border-green-700">
+        <div class="flex flex-row justify-center items-center">
+        <div class="mr-5 mt-8">
+            <label for="">Nhập họ tên: </label>
+            <input type="text" class="p-2 rounded-2xl border border-green-500" id="hoTen" placeholder="Họ và tên">
+        </div>
+        <div class="mr-5 mt-8">
+            <label for="">Nhập tổng thu nhập cả năm: </label>
+            <input type="text" class="p-2 rounded-2xl border border-green-500" id="thuNhapNam" placeholder="Tổng thu nhập năm">
+        </div>
+        <div class="mr-5 mt-8">
+            <label for="">Nhập số người phụ thuộc: </label>
+            <input type="text" class="p-2 rounded-2xl border border-green-500" id="phuThuoc" placeholder="Số người phụ thuộc">
+        </div>
+        </div>
+
+        <div class="text-center mt-8 text-xl text-green-800 mb-8">
+            <button>
+                <span class="border border-green-800 p-2 rounded-2xl hover:bg-gradient-to-r hover:from-green-600 hover:to-green-200">Tính thuế thu nhập:</span>
+            </button>
+        </div>
+    </div>
+    
+
+    <div class="container mt-10 text-center">
+        <button>
+            <a href="../src/index.html"><span class="bg-gradient-to-r from-green-600 to-green-300 p-4 text-center rounded-2xl text-green-900">1</span></a>
+        </button>
+        <button>
+            <a href="../src/tinhTienDien.html"><span class="bg-gradient-to-r from-green-600 to-green-300 p-4 text-center rounded-2xl text-green-900">2</span></a>
+            
+        </button>
+        <button>
+            <a href="../src/thueThuNhapCaNhan.html"><span class="bg-gradient-to-r from-green-600 to-green-300 p-4 text-center rounded-2xl text-green-900">3</span></a>
+            
+        </button>
+        <button>
+            <a href="../src/tinhTienCap.html"><span class="bg-gradient-to-r from-green-600 to-green-300 p-4 text-center rounded-2xl text-green-900">4</span></a>
+        </button>
+    </div>
+    <script src="../src/js/main.js"></script>
+</body>
+</html>

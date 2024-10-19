@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIỀN CÁP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../src/css/output.css">
+    <link rel="icon" href="../src/img/kiwi.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-center border-2 border-purple-800 p-4 rounded-2xl text-4xl font-bold text-purple-800">TÍNH TIỀN CÁP</h3>
+    </div>
+    <div class="container mt-8">
+        <p><i class="fab fa-slack"></i>Viết chương trình tính hoá đơn khách hàng cho một ty cáp.
+        <br>
+        Có 2 loại khách hàng: Nhà dân và doanh nghiệp. Có 2 mức giá tính tiền cáp
+        </p>
+        <div>
+            <ol type="1">
+                <li>1. Nhà dân
+                    <ul>
+                        <li>Phí xử lí hoá đơn: 4.5$</li>
+                        <li>Phí dịch vụ cơ bản: 20.5$</li>
+                        <li>Thuê kênh cao cấp: 7.5$/ kênh</li>
+                    </ul>
+                </li>
+                <li>2. Doanh nghiệp
+                    <uh>
+                        <li>Phí xử lí hoá đơn: 15$</li>
+                        <li>Phí dịch vụ cơ bản: 75$ cho tổng 10 kết nối đầu, mỗi kết nối thêm 5$/ kết nối </li>
+                        <li>Thuê kênh cao cấp: 50$/ kênh</li>
+                    </uh>
+                </li>
+            </ol>
+        </div>
+        <p><i class="fab fa-slack"></i> Chương trình cho phép nhập vào
+        <br>
+        Mã khách hàng, Loại khách hàng, số kết nối, số kênh cao cấp. Nếu chọn loại khách hàng là <span class="text-purple-400">Doanh nghiệp ô nhập kết nối sẽ hiện lên</span> , nếu chọn loại khách hàng là <span  class="text-purple-600">nhà dân thì ô nhập kết nối sẽ ẩn đi hoặc disabled</span>
+        </p>
+    </div>
+    <div class="container mt-8 rounded-2xl border border-purple-700">
+        <div class="flex flex-row mt-8">
+            <div class="mr-5 ml-5">
+                <label for="">Mã khách hàng</label>
+                <input type="text" class="p-2 rounded-2xl border border-purple-500" placeholder="Mã khách hàng">
+            </div>
+            <div class="ml-5">
+                <label for="">Loại khách hàng</label>
+                <select id="customerType" name="customerType" onchange="toggleConnectionField()" class="p-2 rounded-2xl border border-purple-500">
+                    <option value="residential">Nhà dân</option>
+                    <option value="business">Doanh nghiệp</option>
+                </select>
+            </div>
+            <div class="ml-5">
+                <label for="">Số kết nối</label>
+                <input type="number" class="p-2 rounded-2xl border border-purple-500" placeholder="Số kết nối">
+            </div>
+            <div class="ml-5">
+                <label for="">Số kênh cao cấp</label>
+                <input type="number" class="p-2 rounded-2xl border border-purple-500" placeholder="Số kênh cao cấp">
+            </div>
+        </div>
+        <div class="text-center mt-8 text-xl text-purple-800 mb-8">
+            <button>
+                <span class="border border-purple-800 p-2 rounded-2xl hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-200">Tính tiền cáp</span>
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="container mt-10 text-center">
+        <button>
+            <a href="../src/index.html"><span class="bg-gradient-to-r from-purple-500 to-purple-200 p-4 text-center rounded-2xl text-purple-900 
+                hover:bg-gradient-to-r hover:from-purple-200 hover:via-purple-100 hover:to-purple-300">1</span></a>
+        </button>
+        <button>
+            <a href="../src/tinhTienDien.html"><span class="bg-gradient-to-r from-purple-500 to-purple-200 p-4 text-center rounded-2xl text-purple-900 hover:bg-gradient-to-r hover:from-purple-200 hover:via-purple-100 hover:to-purple-300">2</span></a>
+            
+        </button>
+        <button>
+            <a href="../src/thueThuNhapCaNhan.html"><span class="bg-gradient-to-r from-purple-500 to-purple-200 p-4 text-center rounded-2xl text-purple-900 hover:bg-gradient-to-r hover:from-purple-200 hover:via-purple-100 hover:to-purple-300">3</span></a>
+            
+        </button>
+        <button>
+            <a href="../src/tinhTienCap.html"><span class="bg-gradient-to-r from-purple-500 to-purple-200 p-4 text-center rounded-2xl text-purple-900 hover:bg-gradient-to-r hover:from-purple-200 hover:via-purple-100 hover:to-purple-300">4</span></a>
+        </button>
+    </div>
+    <script src="../src/js/main.js"></script>
+</body>
+</html>
