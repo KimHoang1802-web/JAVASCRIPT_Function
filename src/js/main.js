@@ -86,4 +86,33 @@ const thueCaNhan = () => {
 
     let thuNhapChiuThue = 0;
     let thuNhapCaNhan = 0;
-}
+
+    thuNhapChiuThue =  thuNhapCaNam - 4 - (soNguoiPhuThuoc*1.6);
+
+    if(thuNhapChiuThue <= 60){
+        thuNhapCaNhan = thuNhapChiuThue * 0.05;
+    }
+    else if(60<thuNhapChiuThue <=120 ){
+        thuNhapCaNhan = thuNhapChiuThue * 0.05 + (thuNhapChiuThue - 60)*0.1;
+    }
+    else if(120<thuNhapChiuThue <=240 ){
+        thuNhapCaNhan = thuNhapChiuThue * 0.05 + thuNhapChiuThue * 0.1 + (thuNhapChiuThue - 120) * 0.15;
+    }
+    else if(210<thuNhapChiuThue <=384 ){
+        thuNhapCaNhan = thuNhapChiuThue * 0.05 + thuNhapChiuThue * 0.1 + thuNhapChiuThue * 0.15 + (thuNhapChiuThue - 240) * 0.2;
+    }
+    else if(384<thuNhapChiuThue <=624 ){
+        thuNhapCaNhan = thuNhapChiuThue * 0.05 + thuNhapChiuThue * 0.1 + thuNhapChiuThue * 0.15 + thuNhapChiuThue * 0.2 + (thuNhapChiuThue - 384) * 0.25;
+    }
+    else if(624<thuNhapChiuThue <=960){
+        thuNhapCaNhan = thuNhapChiuThue * 0.05 + thuNhapChiuThue * 0.1 + thuNhapChiuThue * 0.15 + thuNhapChiuThue * 0.2 + thuNhapChiuThue * 0.25 + (thuNhapChiuThue - 624) * 0.3;
+    }
+    else{
+        thuNhapCaNhan = thuNhapChiuThue * 0.05 + thuNhapChiuThue * 0.1 + thuNhapChiuThue * 0.15 + thuNhapChiuThue * 0.2 + thuNhapChiuThue * 0.25 + thuNhapChiuThue * 0.3 + (thuNhapChiuThue - 960)*0.35;
+    }
+    document.querySelector("#ketQuaThueThuNhap").innerHTML = `Họ và tên: ${hoTen} <br> Thu nhập cá nhân: ${thuNhapCaNhan}`;
+};
+
+/**
+ * BÀI TẬP TÍNH TIỀN CÁP
+ */
