@@ -116,3 +116,41 @@ const thueCaNhan = () => {
 /**
  * BÀI TẬP TÍNH TIỀN CÁP
  */
+
+function toggleConnectionField() {
+    let customerType = document.getElementById("customerType").value;
+    let connectionField = document.getElementById("soKetNoi");
+    if (customerType === "business") {
+        connectionField.disabled = false;
+    } else {
+        connectionField.disabled = true;
+    }
+}
+
+function tinhTienCap() {
+    let maKhachHang = document.getElementById("maKhachHang").value;
+    let customerType = document.getElementById("customerType").value;
+    let soKetNoi = parseInt(document.getElementById("soKetNoi").value);
+    let soKenhCaoCap = parseInt(document.getElementById("soKenhCaoCap").value);
+
+    let total = 0;
+    let resultText = "Mã khách hàng: " + maKhachHang + "<br>";
+
+    if (customerType === "residential") {
+        total = 4.5 + 20.5 + (7.5 * soKenhCaoCap);
+        resultText += "Loại khách hàng: Nhà dân<br>";
+        resultText += "Phí xử lý hóa đơn: 4.5$<br>";
+        resultText += "Phí dịch vụ cơ bản: 20.5$<br>";
+        resultText += "Phí kênh cao cấp: " + (7.5 * soKenhCaoCap) + "$<br>";
+    } else if (customerType === "business") {
+        total = 15 + 75 + (5 * (soKetNoi - 10)) + (50 * soKenhCaoCap);
+        resultText += "Loại khách hàng: Doanh nghiệp<br>";
+        resultText += "Phí xử lý hóa đơn: 15$<br>";
+        resultText += "Phí dịch vụ cơ bản: 75$<br>";
+        resultText += "Phí kết nối thêm: " + (5 * (soKetNoi - 10)) + "$<br>";
+        resultText += "Phí kênh cao cấp: " + (50 * soKenhCaoCap) + "$<br>";
+    }
+
+    resultText += "Tổng tiền cáp: " + total + "$";
+    document.getElementById("result").innerHTML = resultText;
+}

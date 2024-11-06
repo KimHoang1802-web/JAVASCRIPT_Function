@@ -44,33 +44,36 @@
         <div class="flex flex-row mt-8">
             <div class="mr-5 ml-5">
                 <label for="">Mã khách hàng</label>
-                <input type="text" class="p-2 rounded-2xl border border-purple-500" placeholder="Mã khách hàng">
+                <input type="text" class="p-2 rounded-2xl border border-purple-500" placeholder="Mã khách hàng" id="maKhachHang">
             </div>
             <div class="ml-5">
                 <label for="">Loại khách hàng</label>
-                <select id="customerType" name="customerType" onchange="toggleConnectionField()" class="p-2 rounded-2xl border border-purple-500">
+                <select id="customerType" name="customerType" onchange="toggleConnectionField()" class="p-2 rounded-2xl border border-purple-500" id="loaiKhachHang">
                     <option value="residential">Nhà dân</option>
                     <option value="business">Doanh nghiệp</option>
                 </select>
             </div>
             <div class="ml-5">
                 <label for="">Số kết nối</label>
-                <input type="number" class="p-2 rounded-2xl border border-purple-500" placeholder="Số kết nối">
+                <input type="number" class="p-2 rounded-2xl border border-purple-500" placeholder="Số kết nối" id="soKetNoi">
             </div>
             <div class="ml-5">
                 <label for="">Số kênh cao cấp</label>
-                <input type="number" class="p-2 rounded-2xl border border-purple-500" placeholder="Số kênh cao cấp">
+                <input type="number" class="p-2 rounded-2xl border border-purple-500" placeholder="Số kênh cao cấp" id="soKenhCaoCap">
             </div>
         </div>
+        <!-- Button Tính Tiền Cáp -->
         <div class="text-center mt-8 text-xl text-purple-800 mb-8">
-            <button>
+            <button onclick="tinhTienCap()">
                 <span class="border border-purple-800 p-2 rounded-2xl hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-200">Tính tiền cáp</span>
             </button>
         </div>
+        <div id="result" class="text-center text-xl text-purple-800 mb-8"></div>
+        
     </div>
 
 
-
+    <!-- Button -->
     <div class="container mt-10 text-center">
         <button>
             <a href="../src/index.html"><span class="bg-gradient-to-r from-purple-500 to-purple-200 p-4 text-center rounded-2xl text-purple-900 
